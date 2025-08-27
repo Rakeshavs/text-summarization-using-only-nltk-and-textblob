@@ -1,9 +1,10 @@
 import streamlit as st
+import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from string import punctuation
 from textblob import TextBlob
-import nltk
+
 nltk.download('punkt')
 nltk.download('stopwords')
 # for summarizing of the text function
@@ -93,3 +94,4 @@ if st.button("Generate Summary & Sentiment"):
         st.markdown(f"<div style='text-align: center;'>{gan}</div>", unsafe_allow_html=True)
     else:
         st.warning("Please enter some text to analyze")
+

@@ -56,7 +56,7 @@ if st.button("Generate Summary & Sentiment"):
     if True:
         summary = textsummi(text, summary_ratio)
         polarity, state ,subjectivity= sentiment(text)
-        st.markdown("<h3 style='text-align: center; color: black;'>Original Text</h3>", unsafe_allow_html=True) # originaltext name heading 
+        st.markdown("<h3 style='text-align: center; color: orange;'>Original Text</h3>", unsafe_allow_html=True) # originaltext name heading 
         st.write(text)                  # originaltext
 
         st.markdown("<h3 style='text-align: center; color: green;'>Summary</h3>", unsafe_allow_html=True)#
@@ -91,4 +91,5 @@ if st.button("Generate Summary & Sentiment"):
         st.markdown(f"<div style='text-align: center;'>{gan}</div>", unsafe_allow_html=True)
     else:
         st.warning("Please enter some text to summarize and analyze.")
+
 
